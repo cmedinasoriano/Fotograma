@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10DF7A9A0A9E74AF405BD50B /* Pods_FotogramaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8877647F2A379F3AB9F055A9 /* Pods_FotogramaTests.framework */; };
+		30FE0B711D25AF9C7A6D3760 /* Pods_Fotograma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65911D2BD84BF0E53328505 /* Pods_Fotograma.framework */; };
+		331ADC111F96C67800AABDFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC0A1F96C67700AABDFD /* ViewController.swift */; };
+		331ADC2B1F96C9A300AABDFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC281F96C9A300AABDFD /* GoogleService-Info.plist */; };
+		331ADC2C1F96C9A300AABDFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC291F96C9A300AABDFD /* Info.plist */; };
+		331ADC301F96C9E300AABDFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC2E1F96C9E300AABDFD /* LaunchScreen.storyboard */; };
+		331ADC311F96C9E300AABDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC2F1F96C9E300AABDFD /* Main.storyboard */; };
+		331ADC331F96CA3B00AABDFD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC321F96CA3B00AABDFD /* Login.storyboard */; };
+		331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC341F96CB1000AABDFD /* LoginViewController.swift */; };
+		33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */; };
+		33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7A7021F96C2FE003C726F /* Assets.xcassets */; };
+		33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A7101F96C2FE003C726F /* FotogramaTests.swift */; };
+		33F7A71C1F96C2FE003C726F /* FotogramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A71B1F96C2FE003C726F /* FotogramaUITests.swift */; };
+		B8B1CC2989E690FA7B3F4749 /* Pods_FotogramaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2507CA390DABA618A0620D0 /* Pods_FotogramaUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33F7A70D1F96C2FE003C726F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F7A6F01F96C2FD003C726F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F7A6F71F96C2FD003C726F;
+			remoteInfo = Fotograma;
+		};
+		33F7A7181F96C2FE003C726F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33F7A6F01F96C2FD003C726F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33F7A6F71F96C2FD003C726F;
+			remoteInfo = Fotograma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FBE929F504F667265EFCC52 /* Pods-FotogramaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotogramaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FotogramaTests/Pods-FotogramaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		331ADC0A1F96C67700AABDFD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		331ADC281F96C9A300AABDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		331ADC291F96C9A300AABDFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		331ADC2E1F96C9E300AABDFD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		331ADC2F1F96C9E300AABDFD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		331ADC321F96CA3B00AABDFD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		331ADC341F96CB1000AABDFD /* LoginViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		33F7A6F81F96C2FD003C726F /* Fotograma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotograma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33F7A7021F96C2FE003C726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33F7A70C1F96C2FE003C726F /* FotogramaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotogramaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F7A7101F96C2FE003C726F /* FotogramaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogramaTests.swift; sourceTree = "<group>"; };
+		33F7A7121F96C2FE003C726F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F7A7171F96C2FE003C726F /* FotogramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotogramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F7A71B1F96C2FE003C726F /* FotogramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotogramaUITests.swift; sourceTree = "<group>"; };
+		33F7A71D1F96C2FE003C726F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8877647F2A379F3AB9F055A9 /* Pods_FotogramaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotogramaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E48C05294B0556C22692B65 /* Pods-Fotograma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotograma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma.debug.xcconfig"; sourceTree = "<group>"; };
+		9A78FF956A193242D939060E /* Pods-FotogramaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotogramaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FotogramaUITests/Pods-FotogramaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9EEB235A2DA6DD8AF295EAB3 /* Pods-FotogramaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotogramaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FotogramaUITests/Pods-FotogramaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A65911D2BD84BF0E53328505 /* Pods_Fotograma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fotograma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2507CA390DABA618A0620D0 /* Pods_FotogramaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotogramaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68F59AFC1F360AC63C3ADFE /* Pods-Fotograma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotograma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma.release.xcconfig"; sourceTree = "<group>"; };
+		E0F037BDE2B2CE4A0720EF1F /* Pods-FotogramaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotogramaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FotogramaTests/Pods-FotogramaTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33F7A6F51F96C2FD003C726F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30FE0B711D25AF9C7A6D3760 /* Pods_Fotograma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A7091F96C2FE003C726F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DF7A9A0A9E74AF405BD50B /* Pods_FotogramaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A7141F96C2FE003C726F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B1CC2989E690FA7B3F4749 /* Pods_FotogramaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		331ADC191F96C7B400AABDFD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				331ADC0A1F96C67700AABDFD /* ViewController.swift */,
+				331ADC341F96CB1000AABDFD /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		331ADC231F96C9A200AABDFD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			path = Fotograma/Services;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC241F96C9A200AABDFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			path = Fotograma/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC251F96C9A200AABDFD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			path = Fotograma/Helpers;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC261F96C9A300AABDFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Fotograma/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC271F96C9A300AABDFD /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				331ADC281F96C9A300AABDFD /* GoogleService-Info.plist */,
+				331ADC291F96C9A300AABDFD /* Info.plist */,
+			);
+			name = Supporting;
+			path = Fotograma/Supporting;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC2A1F96C9A300AABDFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Fotograma/Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		331ADC2D1F96C9E300AABDFD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				331ADC2E1F96C9E300AABDFD /* LaunchScreen.storyboard */,
+				331ADC2F1F96C9E300AABDFD /* Main.storyboard */,
+				331ADC321F96CA3B00AABDFD /* Login.storyboard */,
+			);
+			name = Storyboards;
+			path = Fotograma/Storyboards;
+			sourceTree = SOURCE_ROOT;
+		};
+		33F7A6EF1F96C2FD003C726F = {
+			isa = PBXGroup;
+			children = (
+				33F7A6FA1F96C2FD003C726F /* Fotograma */,
+				33F7A70F1F96C2FE003C726F /* FotogramaTests */,
+				33F7A71A1F96C2FE003C726F /* FotogramaUITests */,
+				33F7A6F91F96C2FD003C726F /* Products */,
+				63378925F692DCB3F0E2D28D /* Pods */,
+				526A2E2200127457F2E8C6CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		33F7A6F91F96C2FD003C726F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33F7A6F81F96C2FD003C726F /* Fotograma.app */,
+				33F7A70C1F96C2FE003C726F /* FotogramaTests.xctest */,
+				33F7A7171F96C2FE003C726F /* FotogramaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33F7A6FA1F96C2FD003C726F /* Fotograma */ = {
+			isa = PBXGroup;
+			children = (
+				33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */,
+				331ADC191F96C7B400AABDFD /* Controllers */,
+				331ADC241F96C9A200AABDFD /* Extensions */,
+				331ADC251F96C9A200AABDFD /* Helpers */,
+				331ADC261F96C9A300AABDFD /* Models */,
+				331ADC231F96C9A200AABDFD /* Services */,
+				331ADC2D1F96C9E300AABDFD /* Storyboards */,
+				331ADC271F96C9A300AABDFD /* Supporting */,
+				331ADC2A1F96C9A300AABDFD /* Views */,
+				33F7A7021F96C2FE003C726F /* Assets.xcassets */,
+			);
+			path = Fotograma;
+			sourceTree = "<group>";
+		};
+		33F7A70F1F96C2FE003C726F /* FotogramaTests */ = {
+			isa = PBXGroup;
+			children = (
+				33F7A7101F96C2FE003C726F /* FotogramaTests.swift */,
+				33F7A7121F96C2FE003C726F /* Info.plist */,
+			);
+			path = FotogramaTests;
+			sourceTree = "<group>";
+		};
+		33F7A71A1F96C2FE003C726F /* FotogramaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				33F7A71B1F96C2FE003C726F /* FotogramaUITests.swift */,
+				33F7A71D1F96C2FE003C726F /* Info.plist */,
+			);
+			path = FotogramaUITests;
+			sourceTree = "<group>";
+		};
+		526A2E2200127457F2E8C6CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A65911D2BD84BF0E53328505 /* Pods_Fotograma.framework */,
+				8877647F2A379F3AB9F055A9 /* Pods_FotogramaTests.framework */,
+				B2507CA390DABA618A0620D0 /* Pods_FotogramaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63378925F692DCB3F0E2D28D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E48C05294B0556C22692B65 /* Pods-Fotograma.debug.xcconfig */,
+				C68F59AFC1F360AC63C3ADFE /* Pods-Fotograma.release.xcconfig */,
+				0FBE929F504F667265EFCC52 /* Pods-FotogramaTests.debug.xcconfig */,
+				E0F037BDE2B2CE4A0720EF1F /* Pods-FotogramaTests.release.xcconfig */,
+				9EEB235A2DA6DD8AF295EAB3 /* Pods-FotogramaUITests.debug.xcconfig */,
+				9A78FF956A193242D939060E /* Pods-FotogramaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33F7A6F71F96C2FD003C726F /* Fotograma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F7A7201F96C2FE003C726F /* Build configuration list for PBXNativeTarget "Fotograma" */;
+			buildPhases = (
+				47E69660607BCC2CCDCCDFB0 /* [CP] Check Pods Manifest.lock */,
+				33F7A6F41F96C2FD003C726F /* Sources */,
+				33F7A6F51F96C2FD003C726F /* Frameworks */,
+				33F7A6F61F96C2FD003C726F /* Resources */,
+				68D19A0C2057D731D9029ED4 /* [CP] Embed Pods Frameworks */,
+				B94D30B1A03B5E0EB36410B8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fotograma;
+			productName = Fotograma;
+			productReference = 33F7A6F81F96C2FD003C726F /* Fotograma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33F7A70B1F96C2FE003C726F /* FotogramaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F7A7231F96C2FE003C726F /* Build configuration list for PBXNativeTarget "FotogramaTests" */;
+			buildPhases = (
+				724E40B463D2886D9E4D7EC8 /* [CP] Check Pods Manifest.lock */,
+				33F7A7081F96C2FE003C726F /* Sources */,
+				33F7A7091F96C2FE003C726F /* Frameworks */,
+				33F7A70A1F96C2FE003C726F /* Resources */,
+				F5EE78C2A2F126246246650A /* [CP] Embed Pods Frameworks */,
+				B795BA029701C7AC587300C1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F7A70E1F96C2FE003C726F /* PBXTargetDependency */,
+			);
+			name = FotogramaTests;
+			productName = FotogramaTests;
+			productReference = 33F7A70C1F96C2FE003C726F /* FotogramaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33F7A7161F96C2FE003C726F /* FotogramaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33F7A7261F96C2FE003C726F /* Build configuration list for PBXNativeTarget "FotogramaUITests" */;
+			buildPhases = (
+				BC18F882FA1667FE6AFC2C3E /* [CP] Check Pods Manifest.lock */,
+				33F7A7131F96C2FE003C726F /* Sources */,
+				33F7A7141F96C2FE003C726F /* Frameworks */,
+				33F7A7151F96C2FE003C726F /* Resources */,
+				4265C960E1E4949814539C4B /* [CP] Embed Pods Frameworks */,
+				B6BF3452118FF6A424FA6A51 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33F7A7191F96C2FE003C726F /* PBXTargetDependency */,
+			);
+			name = FotogramaUITests;
+			productName = FotogramaUITests;
+			productReference = 33F7A7171F96C2FE003C726F /* FotogramaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33F7A6F01F96C2FD003C726F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Erick Sauri";
+				TargetAttributes = {
+					33F7A6F71F96C2FD003C726F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					33F7A70B1F96C2FE003C726F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33F7A6F71F96C2FD003C726F;
+					};
+					33F7A7161F96C2FE003C726F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33F7A6F71F96C2FD003C726F;
+					};
+				};
+			};
+			buildConfigurationList = 33F7A6F31F96C2FD003C726F /* Build configuration list for PBXProject "Fotograma" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33F7A6EF1F96C2FD003C726F;
+			productRefGroup = 33F7A6F91F96C2FD003C726F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33F7A6F71F96C2FD003C726F /* Fotograma */,
+				33F7A70B1F96C2FE003C726F /* FotogramaTests */,
+				33F7A7161F96C2FE003C726F /* FotogramaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33F7A6F61F96C2FD003C726F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331ADC2C1F96C9A300AABDFD /* Info.plist in Resources */,
+				331ADC311F96C9E300AABDFD /* Main.storyboard in Resources */,
+				331ADC331F96CA3B00AABDFD /* Login.storyboard in Resources */,
+				331ADC301F96C9E300AABDFD /* LaunchScreen.storyboard in Resources */,
+				33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */,
+				331ADC2B1F96C9A300AABDFD /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A70A1F96C2FE003C726F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A7151F96C2FE003C726F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4265C960E1E4949814539C4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FotogramaUITests/Pods-FotogramaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E69660607BCC2CCDCCDFB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fotograma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68D19A0C2057D731D9029ED4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		724E40B463D2886D9E4D7EC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FotogramaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BF3452118FF6A424FA6A51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FotogramaUITests/Pods-FotogramaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B795BA029701C7AC587300C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FotogramaTests/Pods-FotogramaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B94D30B1A03B5E0EB36410B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC18F882FA1667FE6AFC2C3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FotogramaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5EE78C2A2F126246246650A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FotogramaTests/Pods-FotogramaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33F7A6F41F96C2FD003C726F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
+				331ADC111F96C67800AABDFD /* ViewController.swift in Sources */,
+				33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A7081F96C2FE003C726F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33F7A7131F96C2FE003C726F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F7A71C1F96C2FE003C726F /* FotogramaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33F7A70E1F96C2FE003C726F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F7A6F71F96C2FD003C726F /* Fotograma */;
+			targetProxy = 33F7A70D1F96C2FE003C726F /* PBXContainerItemProxy */;
+		};
+		33F7A7191F96C2FE003C726F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33F7A6F71F96C2FD003C726F /* Fotograma */;
+			targetProxy = 33F7A7181F96C2FE003C726F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		33F7A71E1F96C2FE003C726F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		33F7A71F1F96C2FE003C726F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33F7A7211F96C2FE003C726F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E48C05294B0556C22692B65 /* Pods-Fotograma.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = "$(SRCROOT)/Fotograma/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericksauri.Fotograma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33F7A7221F96C2FE003C726F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68F59AFC1F360AC63C3ADFE /* Pods-Fotograma.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = "$(SRCROOT)/Fotograma/Supporting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericksauri.Fotograma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33F7A7241F96C2FE003C726F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FBE929F504F667265EFCC52 /* Pods-FotogramaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = FotogramaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ericksauri.FotogramaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fotograma.app/Fotograma";
+			};
+			name = Debug;
+		};
+		33F7A7251F96C2FE003C726F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0F037BDE2B2CE4A0720EF1F /* Pods-FotogramaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = FotogramaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ericksauri.FotogramaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fotograma.app/Fotograma";
+			};
+			name = Release;
+		};
+		33F7A7271F96C2FE003C726F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EEB235A2DA6DD8AF295EAB3 /* Pods-FotogramaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = FotogramaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ericksauri.FotogramaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Fotograma;
+			};
+			name = Debug;
+		};
+		33F7A7281F96C2FE003C726F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A78FF956A193242D939060E /* Pods-FotogramaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LUAATCDT63;
+				INFOPLIST_FILE = FotogramaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ericksauri.FotogramaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Fotograma;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33F7A6F31F96C2FD003C726F /* Build configuration list for PBXProject "Fotograma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F7A71E1F96C2FE003C726F /* Debug */,
+				33F7A71F1F96C2FE003C726F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F7A7201F96C2FE003C726F /* Build configuration list for PBXNativeTarget "Fotograma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F7A7211F96C2FE003C726F /* Debug */,
+				33F7A7221F96C2FE003C726F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F7A7231F96C2FE003C726F /* Build configuration list for PBXNativeTarget "FotogramaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F7A7241F96C2FE003C726F /* Debug */,
+				33F7A7251F96C2FE003C726F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33F7A7261F96C2FE003C726F /* Build configuration list for PBXNativeTarget "FotogramaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33F7A7271F96C2FE003C726F /* Debug */,
+				33F7A7281F96C2FE003C726F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33F7A6F01F96C2FD003C726F /* Project object */;
+}
