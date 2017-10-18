@@ -16,6 +16,9 @@
 		331ADC311F96C9E300AABDFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC2F1F96C9E300AABDFD /* Main.storyboard */; };
 		331ADC331F96CA3B00AABDFD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331ADC321F96CA3B00AABDFD /* Login.storyboard */; };
 		331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC341F96CB1000AABDFD /* LoginViewController.swift */; };
+		331ADC371F96DAAC00AABDFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC361F96DAAC00AABDFD /* User.swift */; };
+		331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */; };
+		3363846F1F96E5C90096A936 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363846E1F96E5C90096A936 /* UserService.swift */; };
 		33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */; };
 		33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7A7021F96C2FE003C726F /* Assets.xcassets */; };
 		33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A7101F96C2FE003C726F /* FotogramaTests.swift */; };
@@ -49,6 +52,9 @@
 		331ADC2F1F96C9E300AABDFD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		331ADC321F96CA3B00AABDFD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		331ADC341F96CB1000AABDFD /* LoginViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		331ADC361F96DAAC00AABDFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		3363846E1F96E5C90096A936 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		33F7A6F81F96C2FD003C726F /* Fotograma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotograma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F7A7021F96C2FE003C726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			children = (
 				331ADC0A1F96C67700AABDFD /* ViewController.swift */,
 				331ADC341F96CB1000AABDFD /* LoginViewController.swift */,
+				331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,6 +115,7 @@
 		331ADC231F96C9A200AABDFD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3363846E1F96E5C90096A936 /* UserService.swift */,
 			);
 			name = Services;
 			path = Fotograma/Services;
@@ -132,6 +140,7 @@
 		331ADC261F96C9A300AABDFD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				331ADC361F96DAAC00AABDFD /* User.swift */,
 			);
 			name = Models;
 			path = Fotograma/Models;
@@ -563,8 +572,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331ADC371F96DAAC00AABDFD /* User.swift in Sources */,
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
+				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
 				331ADC111F96C67800AABDFD /* ViewController.swift in Sources */,
+				331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */,
 				33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
