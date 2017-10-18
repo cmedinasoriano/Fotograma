@@ -8,21 +8,88 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="maF-wz-qbb">
             <objects>
-                <viewController id="Ouh-IP-Lax" sceneMemberID="viewController">
+                <viewController id="Ouh-IP-Lax" customClass="LoginViewController" customModule="Fotograma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BN9-JY-Nl4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBi-Le-T6m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFY-mg-3sb" userLabel="Header">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OuL-2f-PnT">
+                                                <rect key="frame" x="56" y="86.5" width="263.5" height="92.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOTOGRAMA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ur-aY-9Ti">
+                                                        <rect key="frame" x="3" y="0.0" width="257.5" height="47"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="36"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see photos and videos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBk-Jr-Bvw">
+                                                        <rect key="frame" x="0.0" y="72" width="263.5" height="20.5"/>
+                                                        <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="OuL-2f-PnT" firstAttribute="centerY" secondItem="pFY-mg-3sb" secondAttribute="centerY" id="X6W-Ua-Uzk"/>
+                                            <constraint firstItem="OuL-2f-PnT" firstAttribute="centerX" secondItem="pFY-mg-3sb" secondAttribute="centerX" id="bgO-tO-S98"/>
+                                            <constraint firstAttribute="height" constant="265" id="qkd-nU-afR"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ss-r1-vrc">
+                                        <rect key="frame" x="35" y="290" width="305" height="44"/>
+                                        <color key="backgroundColor" red="0.2196078431372549" green="0.59215686274509804" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="zJd-hr-FSd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Get Started"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="Ouh-IP-Lax" eventType="touchUpInside" id="xlG-yI-Waq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pFY-mg-3sb" firstAttribute="leading" secondItem="RBi-Le-T6m" secondAttribute="leading" id="1jW-sM-PQw"/>
+                                    <constraint firstItem="2ss-r1-vrc" firstAttribute="leading" secondItem="RBi-Le-T6m" secondAttribute="leading" constant="35" id="ERE-vS-LcZ"/>
+                                    <constraint firstItem="2ss-r1-vrc" firstAttribute="top" secondItem="pFY-mg-3sb" secondAttribute="bottom" constant="25" id="FhV-A2-EkR"/>
+                                    <constraint firstAttribute="trailing" secondItem="pFY-mg-3sb" secondAttribute="trailing" id="nsI-CC-F8t"/>
+                                    <constraint firstItem="pFY-mg-3sb" firstAttribute="top" secondItem="RBi-Le-T6m" secondAttribute="top" id="tSK-Sj-uGd"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ss-r1-vrc" secondAttribute="trailing" constant="35" id="uM2-Ax-x10"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RBi-Le-T6m" firstAttribute="top" secondItem="BN9-JY-Nl4" secondAttribute="top" id="C1y-9D-ghr"/>
+                            <constraint firstItem="RBi-Le-T6m" firstAttribute="leading" secondItem="9M7-gV-B8W" secondAttribute="leading" id="Nvt-O4-3Mh"/>
+                            <constraint firstItem="RBi-Le-T6m" firstAttribute="trailing" secondItem="9M7-gV-B8W" secondAttribute="trailing" id="VRs-nf-z4G"/>
+                            <constraint firstItem="9M7-gV-B8W" firstAttribute="bottom" secondItem="RBi-Le-T6m" secondAttribute="bottom" id="ymK-Xv-r1p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9M7-gV-B8W"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJ3-kR-PN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="-16"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="-16.641679160419791"/>
         </scene>
     </scenes>
 </document>
