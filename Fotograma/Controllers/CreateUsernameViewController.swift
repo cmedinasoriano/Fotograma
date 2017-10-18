@@ -56,16 +56,12 @@ class CreateUsernameViewController: UIViewController {
   }
   
   func goToMainView() {
-    // Get main view
-    let storyboard = UIStoryboard(name: "Main", bundle: .main)
-    
     // Instantiate storyboard
-    if let initialViewController = storyboard.instantiateInitialViewController() {
-      // Make it the root view controller
-      self.view.window?.rootViewController = initialViewController
-      // Put in in front of everything
-      self.view.window?.makeKeyAndVisible()
-    }
+    let initialViewController = UIStoryboard.initialViewController(for: .main)
+    // Make it the root view controller
+    self.view.window?.rootViewController = initialViewController
+    // Put in in front of everything
+    self.view.window?.makeKeyAndVisible()
   }
 
   /*
