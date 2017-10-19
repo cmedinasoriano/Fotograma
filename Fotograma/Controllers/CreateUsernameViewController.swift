@@ -48,7 +48,7 @@ class CreateUsernameViewController: UIViewController {
       guard let user = user else { return }
   
       // Set current user
-      User.setCurrent(user)
+      User.setCurrent(user, writeToUserDefaults: true)
       
       // Go to main view
       self.goToMainView()
