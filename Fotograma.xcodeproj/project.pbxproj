@@ -22,6 +22,10 @@
 		3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5361F98199700020412 /* Storyboard+Utility.swift */; };
 		3398F5391F981E8500020412 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5381F981E8500020412 /* HomeViewController.swift */; };
 		3398F53B1F981ECD00020412 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F53A1F981ECD00020412 /* FindFriendsViewController.swift */; };
+		3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F53C1F9825F400020412 /* MainTabBarController.swift */; };
+		3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F53E1F98278800020412 /* FGPhotoHelper.swift */; };
+		3398F5411F982DB100020412 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5401F982DB100020412 /* StorageService.swift */; };
+		3398F5431F982EE100020412 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5421F982EE100020412 /* PostService.swift */; };
 		33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */; };
 		33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7A7021F96C2FE003C726F /* Assets.xcassets */; };
 		33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A7101F96C2FE003C726F /* FotogramaTests.swift */; };
@@ -61,6 +65,10 @@
 		3398F5361F98199700020412 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		3398F5381F981E8500020412 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3398F53A1F981ECD00020412 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
+		3398F53C1F9825F400020412 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3398F53E1F98278800020412 /* FGPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPhotoHelper.swift; sourceTree = "<group>"; };
+		3398F5401F982DB100020412 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		3398F5421F982EE100020412 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		33F7A6F81F96C2FD003C726F /* Fotograma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotograma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F7A7021F96C2FE003C726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 				331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */,
 				3398F5381F981E8500020412 /* HomeViewController.swift */,
 				3398F53A1F981ECD00020412 /* FindFriendsViewController.swift */,
+				3398F53C1F9825F400020412 /* MainTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				3363846E1F96E5C90096A936 /* UserService.swift */,
+				3398F5401F982DB100020412 /* StorageService.swift */,
+				3398F5421F982EE100020412 /* PostService.swift */,
 			);
 			name = Services;
 			path = Fotograma/Services;
@@ -140,6 +151,7 @@
 		331ADC251F96C9A200AABDFD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3398F53E1F98278800020412 /* FGPhotoHelper.swift */,
 			);
 			name = Helpers;
 			path = Fotograma/Helpers;
@@ -582,12 +594,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				331ADC371F96DAAC00AABDFD /* User.swift in Sources */,
+				3398F5411F982DB100020412 /* StorageService.swift in Sources */,
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
+				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
 				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
 				3398F5391F981E8500020412 /* HomeViewController.swift in Sources */,
+				3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */,
 				3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */,
 				3398F53B1F981ECD00020412 /* FindFriendsViewController.swift in Sources */,
 				3398F5351F98192C00020412 /* Constants.swift in Sources */,
+				3398F5431F982EE100020412 /* PostService.swift in Sources */,
 				331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */,
 				33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */,
 			);
