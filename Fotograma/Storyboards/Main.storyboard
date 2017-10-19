@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ih3-ug-2Ji"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_plus_black" id="toS-Av-wGW">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="tab_plus_black" id="toS-Av-wGW">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -37,7 +37,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KnW-Cj-bYo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_profile_black" id="DYm-uD-UtO">
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="tab_profile_black" id="DYm-uD-UtO">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
                 </viewController>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="726" y="-256"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="wHu-Sz-CeN">
             <objects>
-                <tabBarController id="jp9-uz-f0Q" sceneMemberID="viewController">
+                <tabBarController id="jp9-uz-f0Q" customClass="MainTabBarController" customModule="Fotograma" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bzu-lv-Kl0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
