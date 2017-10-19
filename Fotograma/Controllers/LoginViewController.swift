@@ -72,7 +72,7 @@ extension LoginViewController: FUIAuthDelegate {
     UserService.show(forUID: user.uid, completion: { (user) in
       if let user = user {
         // Set current user
-        User.setCurrent(user)
+        User.setCurrent(user, writeToUserDefaults: true)
         // Go to main view
         self.goToMainView()
       } else {

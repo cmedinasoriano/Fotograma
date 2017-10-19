@@ -19,13 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Configure Firebase
     FirebaseApp.configure()
-    
-    // Instantiate login storyboard
-    let initialViewController = UIStoryboard.initialViewController(for: .login)
-    // Make it the root view controller
-    window?.rootViewController = initialViewController
-    // Position the view in front of all others
-    window?.makeKeyAndVisible()
+
+    // Configure initial root view controller based on authentication
+    configureInitialRootViewController(for: window)
 
     return true
   }
@@ -55,3 +51,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
 }
 
+extension AppDelegate {
+  // Configures initial root ViewController based on user authentication
+  func configureInitialRootViewController(for window: UIWindow?) {
+    // UserDefaults
+    let defaults = UserDefaults.standard
+    // Initial root ViewController
+    let initialViewController: UIViewController
+    
+    // If user is already authenticated
+    if Auth.auth().currentUser != nil,
+      // Get user data from UserDefaults
+      let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+      // Unarchive data as User
+      let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+      // Set current user
+      User.setCurrent(user)
+      
+      // Instantiate initial view controller as main
+      initialViewController = UIStoryboard.initialViewController(for: .main)
+    } else {
+      // Otherwise not authenticated instantiate intial view controller as login
+      initialViewController = UIStoryboard.initialViewController(for: .login)
+    }
+    // Make it the root view controller
+    window?.rootViewController = initialViewController
+    // Position the view in front of all others
+    window?.makeKeyAndVisible()
+  }
+}
