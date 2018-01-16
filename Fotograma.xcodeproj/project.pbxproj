@@ -26,6 +26,9 @@
 		3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F53E1F98278800020412 /* FGPhotoHelper.swift */; };
 		3398F5411F982DB100020412 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5401F982DB100020412 /* StorageService.swift */; };
 		3398F5431F982EE100020412 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5421F982EE100020412 /* PostService.swift */; };
+		33A996F6200DB4FA00B057C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F5200DB4FA00B057C0 /* Post.swift */; };
+		33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F7200DB7D300B057C0 /* UIImage+Size.swift */; };
+		33A996FA200DB88600B057C0 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F9200DB88600B057C0 /* StorageReference+Post.swift */; };
 		33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */; };
 		33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7A7021F96C2FE003C726F /* Assets.xcassets */; };
 		33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A7101F96C2FE003C726F /* FotogramaTests.swift */; };
@@ -69,6 +72,9 @@
 		3398F53E1F98278800020412 /* FGPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPhotoHelper.swift; sourceTree = "<group>"; };
 		3398F5401F982DB100020412 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		3398F5421F982EE100020412 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		33A996F5200DB4FA00B057C0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		33A996F7200DB7D300B057C0 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		33A996F9200DB88600B057C0 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		33F7A6F81F96C2FD003C726F /* Fotograma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotograma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F7A7021F96C2FE003C726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				3398F5361F98199700020412 /* Storyboard+Utility.swift */,
+				33A996F7200DB7D300B057C0 /* UIImage+Size.swift */,
+				33A996F9200DB88600B057C0 /* StorageReference+Post.swift */,
 			);
 			name = Extensions;
 			path = Fotograma/Extensions;
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				331ADC361F96DAAC00AABDFD /* User.swift */,
+				33A996F5200DB4FA00B057C0 /* Post.swift */,
 			);
 			name = Models;
 			path = Fotograma/Models;
@@ -598,10 +607,13 @@
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
 				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
 				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
+				33A996F6200DB4FA00B057C0 /* Post.swift in Sources */,
+				33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */,
 				3398F5391F981E8500020412 /* HomeViewController.swift in Sources */,
 				3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */,
 				3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */,
 				3398F53B1F981ECD00020412 /* FindFriendsViewController.swift in Sources */,
+				33A996FA200DB88600B057C0 /* StorageReference+Post.swift in Sources */,
 				3398F5351F98192C00020412 /* Constants.swift in Sources */,
 				3398F5431F982EE100020412 /* PostService.swift in Sources */,
 				331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */,
