@@ -24,7 +24,7 @@ struct PostService {
       create(forURLString: urlString, aspectHeight: aspectHeight)
     })
   }
-  
+
   /**
    * Creates new post in database
    *
