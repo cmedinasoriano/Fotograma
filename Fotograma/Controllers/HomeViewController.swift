@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
 
   // MARK: - Properties
   var posts = [Post]()
+  
+  let refreshControl = UIRefreshControl()
 
   let timestampFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -30,11 +32,7 @@ class HomeViewController: UIViewController {
     // Style table
     configureTableView()
     
-    // Get 
-    UserService.posts(for: User.current, completion: { (posts) in
-      self.posts = posts
-      self.tableView.reloadData()
-    })
+    reloadTimeline()
   }
   
   override func didReceiveMemoryWarning() {
@@ -47,6 +45,25 @@ class HomeViewController: UIViewController {
     tableView.tableFooterView = UIView()
     // Remove separators from cells
     tableView.separatorStyle = .none
+    // Add pull to refresh
+    refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+    // Add refresh to table
+    tableView.addSubview(refreshControl)
+  }
+
+  @objc func reloadTimeline() {
+    // Get
+    UserService.timeline { (posts) in
+      self.posts = posts
+      
+      // If currently refrshing
+      if (self.refreshControl.isRefreshing) {
+        // Stop refreshing
+        self.refreshControl.endRefreshing()
+      }
+
+      self.tableView.reloadData()
+    }
   }
 
   /*
@@ -98,7 +115,7 @@ extension HomeViewController: UITableViewDataSource {
     case 0:
       let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell", for: indexPath) as! PostHeaderCell
 
-      cell.usernameLabel.text = User.current.username
+      cell.usernameLabel.text = post.poster.username
       return cell
     // Image Cell
     case 1:

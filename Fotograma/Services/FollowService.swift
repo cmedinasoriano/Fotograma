@@ -45,9 +45,30 @@ struct FollowService {
     ref.updateChildValues(followData) { (error, _) in
       if let error = error {
         assertionFailure(error.localizedDescription)
+        success(false)
       }
       
-      success(error == nil)
+      UserService.posts(for: user) { (posts) in
+        // Get all the post ids for the user
+        let postKeys = posts.flatMap { $0.key }
+        
+        // Build multi location dictionary
+        var followData = [String: Any]()
+        let timelinePostDict = ["poster_uid": user.uid]
+        
+        // Update each post
+        postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
+        
+        // Write the dictionary to database
+        ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
+          if let error = error {
+            assertionFailure(error.localizedDescription)
+          }
+          
+          // Return success if no error
+          success(error == nil)
+        })
+      }
     }
   }
   

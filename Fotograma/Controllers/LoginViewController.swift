@@ -17,14 +17,12 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     // Do any additional setup after loading the view.
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-    
   }
   
   // MARK: - IBActions
@@ -77,7 +75,8 @@ extension LoginViewController: FUIAuthDelegate {
         self.goToMainView()
       } else {
         // New user, take them to create username page
-        self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)      }
+        self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+      }
     })
   }
   

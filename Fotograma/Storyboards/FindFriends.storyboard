@@ -75,7 +75,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KnW-Cj-bYo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Find Friends" id="crJ-uC-gsf"/>
+                    <navigationItem key="navigationItem" title="Find Friends" id="crJ-uC-gsf">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Gxg-U6-TQZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r5n-sw-dn3">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtnTapped:" destination="Ep8-ZS-njh" eventType="touchUpInside" id="2lu-a4-m8N"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vJH-kg-P6H" id="4Fm-fz-tyb"/>
                     </connections>
