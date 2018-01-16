@@ -12,7 +12,7 @@ target 'Fotograma' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
-
+  pod 'Kingfisher', '~> 4.0'
   target 'FotogramaTests' do
     inherit! :search_paths
     # Pods for testing

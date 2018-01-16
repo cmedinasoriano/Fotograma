@@ -29,6 +29,10 @@
 		33A996F6200DB4FA00B057C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F5200DB4FA00B057C0 /* Post.swift */; };
 		33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F7200DB7D300B057C0 /* UIImage+Size.swift */; };
 		33A996FA200DB88600B057C0 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996F9200DB88600B057C0 /* StorageReference+Post.swift */; };
+		33A996FC200DBAE800B057C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A996FB200DBAE800B057C0 /* Home.storyboard */; };
+		33A996FE200DC0A900B057C0 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996FD200DC0A900B057C0 /* PostImageCell.swift */; };
+		33A99700200DC53200B057C0 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A996FF200DC53200B057C0 /* PostHeaderCell.swift */; };
+		33A99702200DC87B00B057C0 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A99701200DC87B00B057C0 /* PostActionCell.swift */; };
 		33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */; };
 		33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F7A7021F96C2FE003C726F /* Assets.xcassets */; };
 		33F7A7111F96C2FE003C726F /* FotogramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7A7101F96C2FE003C726F /* FotogramaTests.swift */; };
@@ -75,6 +79,10 @@
 		33A996F5200DB4FA00B057C0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		33A996F7200DB7D300B057C0 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		33A996F9200DB88600B057C0 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		33A996FB200DBAE800B057C0 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		33A996FD200DC0A900B057C0 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		33A996FF200DC53200B057C0 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		33A99701200DC87B00B057C0 /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
 		33F7A6F81F96C2FD003C726F /* Fotograma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotograma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F7A6FB1F96C2FD003C726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F7A7021F96C2FE003C726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +197,9 @@
 		331ADC2A1F96C9A300AABDFD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33A996FD200DC0A900B057C0 /* PostImageCell.swift */,
+				33A996FF200DC53200B057C0 /* PostHeaderCell.swift */,
+				33A99701200DC87B00B057C0 /* PostActionCell.swift */,
 			);
 			name = Views;
 			path = Fotograma/Views;
@@ -199,6 +210,7 @@
 			children = (
 				331ADC2E1F96C9E300AABDFD /* LaunchScreen.storyboard */,
 				331ADC2F1F96C9E300AABDFD /* Main.storyboard */,
+				33A996FB200DBAE800B057C0 /* Home.storyboard */,
 				331ADC321F96CA3B00AABDFD /* Login.storyboard */,
 			);
 			name = Storyboards;
@@ -401,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A996FC200DBAE800B057C0 /* Home.storyboard in Resources */,
 				331ADC2C1F96C9A300AABDFD /* Info.plist in Resources */,
 				331ADC311F96C9E300AABDFD /* Main.storyboard in Resources */,
 				331ADC331F96CA3B00AABDFD /* Login.storyboard in Resources */,
@@ -470,6 +483,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -483,6 +497,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -607,7 +622,9 @@
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
 				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
 				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
+				33A99702200DC87B00B057C0 /* PostActionCell.swift in Sources */,
 				33A996F6200DB4FA00B057C0 /* Post.swift in Sources */,
+				33A996FE200DC0A900B057C0 /* PostImageCell.swift in Sources */,
 				33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */,
 				3398F5391F981E8500020412 /* HomeViewController.swift in Sources */,
 				3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */,
@@ -617,6 +634,7 @@
 				3398F5351F98192C00020412 /* Constants.swift in Sources */,
 				3398F5431F982EE100020412 /* PostService.swift in Sources */,
 				331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */,
+				33A99700200DC53200B057C0 /* PostHeaderCell.swift in Sources */,
 				33F7A6FC1F96C2FD003C726F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
