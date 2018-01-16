@@ -100,18 +100,67 @@ extension HomeViewController: UITableViewDataSource {
 
       cell.usernameLabel.text = User.current.username
       return cell
+    // Image Cell
     case 1:
       let cell = tableView.dequeueReusableCell(withIdentifier: "PostImageCell", for: indexPath) as! PostImageCell
       let imageURL = URL(string: post.imageURL)
     
       cell.postImageView.kf.setImage(with: imageURL)
       return cell;
+    // Actions Cell
     case 2:
       let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell", for: indexPath) as! PostActionCell
-      cell.timeLabel.text = timestampFormatter.string(from: post.creationDate)
+      cell.delegate = self
+      configureCell(cell, with: post)
       return cell
     default:
       fatalError("Error: unexpected indexPath!")
     }
+  }
+
+  func configureCell(_ cell: PostActionCell, with post: Post) {
+    cell.likeButton.isSelected = post.isLiked
+    cell.likesLabel.text = "\(post.likeCount) likes"
+    cell.timeLabel.text = timestampFormatter.string(from: post.creationDate)
+  }
+}
+
+// MARK: - PostActionCellDelegate
+extension HomeViewController: PostActionCellDelegate {
+  func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
+    // Make sure we can get the indexPath for cell
+    guard let indexPath = tableView.indexPath(for: cell) else {
+      return
+    }
+    
+    // Disable further user interaction
+    likeButton.isUserInteractionEnabled = false
+    
+    // Get post
+    let post = posts[indexPath.section]
+    
+    // Set liked for post
+    LikeService.setIsLiked(!post.isLiked, for: post, success: { (success) in
+      // When the closure returns allow user interaction again
+      defer {
+        likeButton.isUserInteractionEnabled = true
+      }
+      
+      // If there was a network error return
+      guard success else { return }
+      
+      // Change the like properties for the post
+      post.likeCount += !post.isLiked ? 1 : -1
+      post.isLiked = !post.isLiked
+      
+      // Get reference to current cell
+      guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+        else { return }
+      
+      // Update the UI of the cell on the main thread
+      DispatchQueue.main.async {
+        self.configureCell(cell, with: post)
+      }
+    })
   }
 }

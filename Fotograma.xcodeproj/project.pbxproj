@@ -17,6 +17,7 @@
 		331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC341F96CB1000AABDFD /* LoginViewController.swift */; };
 		331ADC371F96DAAC00AABDFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC361F96DAAC00AABDFD /* User.swift */; };
 		331ADC391F96E19900AABDFD /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */; };
+		3332D004200E816300298F06 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3332D003200E816300298F06 /* LikeService.swift */; };
 		3363846F1F96E5C90096A936 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363846E1F96E5C90096A936 /* UserService.swift */; };
 		3398F5351F98192C00020412 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5341F98192C00020412 /* Constants.swift */; };
 		3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5361F98199700020412 /* Storyboard+Utility.swift */; };
@@ -67,6 +68,7 @@
 		331ADC341F96CB1000AABDFD /* LoginViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		331ADC361F96DAAC00AABDFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		331ADC381F96E19900AABDFD /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		3332D003200E816300298F06 /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		3363846E1F96E5C90096A936 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3398F5341F98192C00020412 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3398F5361F98199700020412 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				3363846E1F96E5C90096A936 /* UserService.swift */,
 				3398F5401F982DB100020412 /* StorageService.swift */,
 				3398F5421F982EE100020412 /* PostService.swift */,
+				3332D003200E816300298F06 /* LikeService.swift */,
 			);
 			name = Services;
 			path = Fotograma/Services;
@@ -623,6 +626,7 @@
 				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
 				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
 				33A99702200DC87B00B057C0 /* PostActionCell.swift in Sources */,
+				3332D004200E816300298F06 /* LikeService.swift in Sources */,
 				33A996F6200DB4FA00B057C0 /* Post.swift in Sources */,
 				33A996FE200DC0A900B057C0 /* PostImageCell.swift in Sources */,
 				33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */,

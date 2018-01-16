@@ -53,8 +53,37 @@ struct UserService {
         return completion([])
       }
       
-      let posts = snapshot.reversed().flatMap(Post.init)
-      completion(posts)
+      // Create DispatchGroup (GCD)
+      let dispatchGroup = DispatchGroup()
+  
+      let posts: [Post] = snapshot
+        // Get newest firest
+        .reversed()
+        // Map
+        .flatMap {
+          guard let post = Post(snapshot: $0)
+            else { return nil }
+          
+          // Enter dispatch group for async action
+          dispatchGroup.enter()
+          
+          // See if post is liked
+          LikeService.isPostLiked(post) { (isLiked) in
+            // Set post liked
+            post.isLiked = isLiked
+            
+            // Finish async action
+            dispatchGroup.leave()
+          }
+          
+          // Return post
+          return post
+        }
+      
+      // Notify main thread when posts are complete
+      dispatchGroup.notify(queue: .main, execute: {
+        completion(posts)
+      })
     })
   }
 }
