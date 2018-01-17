@@ -26,7 +26,7 @@ struct PostService {
   }
 
   static func show(forKey postKey: String, posterUID: String, completion: @escaping (Post?) -> Void) {
-    let ref = Database.database().reference().child("posts").child(posterUID).child(postKey)
+    let ref = DatabaseReference.toLocation(.showPost(uid: posterUID, postKey: postKey))
     
     ref.observeSingleEvent(of: .value, with: { (snapshot) in
       guard let post = Post(snapshot: snapshot) else {
@@ -51,10 +51,10 @@ struct PostService {
     let post = Post(imageURL: urlString, imageHeight: aspectHeight)
     
     // Get reference to database root
-    let rootRef = Database.database().reference()
+    let rootRef = DatabaseReference.FGLocation.root.asDatabaseReference()
     
     // Get reference to new post
-    let newPostRef = rootRef.child("posts").child(currentUser.uid).childByAutoId()
+    let newPostRef = DatabaseReference.toLocation(.newPost(currentUID: currentUser.uid))
     
     // Get new post id
     let newPostKey = newPostRef.key
