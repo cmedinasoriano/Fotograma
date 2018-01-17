@@ -21,7 +21,8 @@ struct LikeService {
     let currentUserId = User.current.uid
     
     // Like post
-    let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUserId)
+    let likesRef = DatabaseReference.toLocation(.likes(postKey: key, currentUID: currentUserId))
+    
     
     likesRef.setValue(true) { (error, _) in
       if let error = error {
@@ -29,7 +30,8 @@ struct LikeService {
         return success(false)
       }
       
-      let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
+      let likeCountRef = DatabaseReference.toLocation(.likesCount(posterUID: post.poster.uid, postKey: key))
+      
       
       likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
         let currentCount = mutableData.value as? Int ?? 0
@@ -58,7 +60,7 @@ struct LikeService {
     let currentUserId = User.current.uid
     
     // Remove post like
-    let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUserId)
+    let likesRef = DatabaseReference.toLocation(.likes(postKey: key, currentUID: currentUserId))
     
     likesRef.setValue(nil) { (error, _) in
       if let error = error {
@@ -66,7 +68,7 @@ struct LikeService {
         return success(false)
       }
       
-      let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
+      let likeCountRef = DatabaseReference.toLocation(.likesCount(posterUID: post.poster.uid, postKey: key))
       
       likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
         let currentCount = mutableData.value as? Int ?? 0
@@ -102,7 +104,7 @@ struct LikeService {
     }
     
     // Get reference to post likes
-    let likesRef = Database.database().reference().child("postLikes").child(postKey)
+    let likesRef = DatabaseReference.toLocation(.isLiked(postKey: postKey))
     
     // Query likes for user id
     likesRef.queryEqual(toValue: nil, childKey: User.current.uid).observeSingleEvent(of: .value, with: { (snapshot) in

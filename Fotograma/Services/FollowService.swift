@@ -21,7 +21,8 @@ struct FollowService {
 
   static func isUserFollowed(_ user: User, byCurrentUserWithSuccess completion: @escaping (Bool) -> Void) {
     let currentUID = User.current.uid
-    let ref = Database.database().reference().child("followers").child(user.uid)
+    let ref = DatabaseReference.toLocation(.followers(uid: user.uid))
+    
     
     ref.queryEqual(toValue: nil, childKey: currentUID).observeSingleEvent(of: .value, with: { (snapshot) in
       if let _ = snapshot.value as? [String : Bool] {
@@ -40,7 +41,7 @@ struct FollowService {
       "following/\(currentUID)/\(user.uid)": true,
     ]
     
-    let ref = Database.database().reference()
+    let ref = DatabaseReference.FGLocation.root.asDatabaseReference()
     
     ref.updateChildValues(followData) { (error, _) in
       if let error = error {
@@ -80,8 +81,8 @@ struct FollowService {
       "following/\(currentUID)/\(user.uid)": NSNull(),
       ]
     
-    let ref = Database.database().reference()
-    
+    let ref = DatabaseReference.FGLocation.root.asDatabaseReference()
+
     ref.updateChildValues(followData) { (error, _) in
       if let error = error {
         assertionFailure(error.localizedDescription)
