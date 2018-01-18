@@ -87,12 +87,23 @@ struct UserService {
     })
   }
 
-  static func timeline(completion: @escaping ([Post]) -> Void) {
+  static func timeline(pageSize: UInt, lastPostKey: String? = nil, completion: @escaping ([Post]) -> Void) {
     let currentUser = User.current
     
+    print("Current user is \(User.current.username)")
+
     let timelineRef = DatabaseReference.toLocation(.timeline(uid: currentUser.uid))
     
-    timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
+    // Make a query from the ref and limit the number of items to get to pageSize
+    var query = timelineRef.queryOrderedByKey().queryLimited(toLast: pageSize)
+    
+    // If there is a last key
+    if let lastPostKey = lastPostKey {
+      // End query at last post key
+      query = query.queryEnding(atValue: lastPostKey)
+    }
+    
+    query.observeSingleEvent(of: .value, with: { (snapshot) in
       guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
         else { return completion([]) }
       
