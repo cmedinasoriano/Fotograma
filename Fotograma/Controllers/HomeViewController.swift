@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
   
   let refreshControl = UIRefreshControl()
 
+  let paginationHelper = FGPaginationHelper<Post>(serviceMethod: UserService.timeline)
+
   let timestampFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .short
@@ -30,7 +32,9 @@ class HomeViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     // Style table
-    configureTableView()
+    
+    print("HOME VIEW DID LOAD")
+    setupTableView()
     
     reloadTimeline()
   }
@@ -40,7 +44,7 @@ class HomeViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func configureTableView() {
+  func setupTableView() {
     // Remove separators for empty cells
     tableView.tableFooterView = UIView()
     // Remove separators from cells
@@ -52,10 +56,11 @@ class HomeViewController: UIViewController {
   }
 
   @objc func reloadTimeline() {
+    print("RELOADING TIMELINE")
     // Get
-    UserService.timeline { (posts) in
+    self.paginationHelper.reloadData(completion: { [unowned self] (posts) in
       self.posts = posts
-      
+
       // If currently refrshing
       if (self.refreshControl.isRefreshing) {
         // Stop refreshing
@@ -63,7 +68,7 @@ class HomeViewController: UIViewController {
       }
 
       self.tableView.reloadData()
-    }
+    })
   }
 
   /*
@@ -113,28 +118,62 @@ extension HomeViewController: UITableViewDataSource {
     switch indexPath.row {
       // Header Cell
     case 0:
-      let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell", for: indexPath) as! PostHeaderCell
+      let cell: PostHeaderCell = tableView.dequeueReusableCell()
 
       cell.usernameLabel.text = post.poster.username
+
       return cell
     // Image Cell
     case 1:
-      let cell = tableView.dequeueReusableCell(withIdentifier: "PostImageCell", for: indexPath) as! PostImageCell
+      let cell: PostImageCell = tableView.dequeueReusableCell()
       let imageURL = URL(string: post.imageURL)
-    
+  
       cell.postImageView.kf.setImage(with: imageURL)
+  
       return cell;
     // Actions Cell
     case 2:
-      let cell = tableView.dequeueReusableCell(withIdentifier: "PostActionCell", for: indexPath) as! PostActionCell
+      let cell: PostActionCell = tableView.dequeueReusableCell()
+      
       cell.delegate = self
       configureCell(cell, with: post)
+      
       return cell
     default:
       fatalError("Error: unexpected indexPath!")
     }
   }
 
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    print("REACHED END OF POSTS")
+    // If user has scrolled to the end of the content in memory
+    if indexPath.section >= posts.count - 1 {
+      print("GETTING NEXT POSTS")
+      // Get the next few posts
+      paginationHelper.paginate(completion: { [unowned self] (posts) in
+        // Append the posts
+        self.posts.append(contentsOf: posts)
+        
+        print("RETRIEVED \(posts.count) NEW POSTS")
+        
+        // On the main thread
+        DispatchQueue.main.async {
+          // Reload table
+          self.tableView.reloadData()
+        }
+      })
+    } else {
+      print("NO MORE POSTS AVAILABLE")
+      let alertCtrl = UIAlertController.init(title: "End of Timeline", message: "There are no more posts available.", preferredStyle: .alert)
+      
+      let okAlertAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+      
+      alertCtrl.addAction(okAlertAction)
+      
+      alertCtrl.show(self, sender: nil)
+    }
+  }
+  
   func configureCell(_ cell: PostActionCell, with post: Post) {
     cell.likeButton.isSelected = post.isLiked
     cell.likesLabel.text = "\(post.likeCount) likes"
