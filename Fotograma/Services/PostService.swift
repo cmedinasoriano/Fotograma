@@ -61,7 +61,7 @@ struct PostService {
     
     UserService.followers(for: currentUser) { (followerUIDs) in
       // Create timeline dictionary for new post
-      let timelinePostDict = ["posted_uid": currentUser.uid]
+      let timelinePostDict = ["poster_uid": currentUser.uid]
       
       // Set updated data
       var updatedData: [String: Any] = ["timeline/\(currentUser.uid)/\(newPostKey)": timelinePostDict]

@@ -6,12 +6,17 @@ target 'Fotograma' do
   use_frameworks!
 
   # Pods for Fotograma
+  pod 'GoogleSignIn'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'FirebaseUI/Google'
   pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Facebook'
   pod 'Kingfisher', '~> 4.0'
   target 'FotogramaTests' do
     inherit! :search_paths

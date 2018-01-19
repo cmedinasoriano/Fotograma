@@ -22,12 +22,14 @@ class FindFriendsCell: UITableViewCell {
     super.awakeFromNib()
     // Initialization code
     
-    followButton.layer.borderColor = UIColor.lightGray.cgColor
     followButton.layer.borderWidth = 1
     followButton.layer.cornerRadius = 24
     followButton.clipsToBounds = true
+    followButton.layer.borderColor = UIColor.fgLightGray.cgColor
     followButton.setTitle("Follow", for: .normal)
     followButton.setTitle("Following", for: .selected)
+    followButton.setBackgroundColor(UIColor.fgBlue, for: .selected)
+    followButton.setBackgroundColor(UIColor.fgLightGray, for: .highlighted)
   }
 
   @IBAction func followButtonTapped(_ sender: UIButton) {

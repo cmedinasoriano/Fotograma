@@ -90,8 +90,6 @@ struct UserService {
   static func timeline(pageSize: UInt, lastPostKey: String? = nil, completion: @escaping ([Post]) -> Void) {
     let currentUser = User.current
     
-    print("Current user is \(User.current.username)")
-
     let timelineRef = DatabaseReference.toLocation(.timeline(uid: currentUser.uid))
     
     // Make a query from the ref and limit the number of items to get to pageSize
@@ -122,7 +120,6 @@ struct UserService {
           if let post = post {
             posts.append(post)
           }
-          
           dispatchGroup.leave()
         }
       }

@@ -25,6 +25,8 @@
 		3344F08D200E97AF00E84AD5 /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3344F08C200E97AF00E84AD5 /* FindFriends.storyboard */; };
 		3344F08F200E984D00E84AD5 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3344F08E200E984D00E84AD5 /* FindFriendsCell.swift */; };
 		3363846F1F96E5C90096A936 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363846E1F96E5C90096A936 /* UserService.swift */; };
+		3396D9A92011883C00A80755 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9A82011883C00A80755 /* UIColor+Utility.swift */; };
+		3396D9AB20118A3600A80755 /* UIButton_Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9AA20118A3600A80755 /* UIButton_Utility.swift */; };
 		3398F5351F98192C00020412 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5341F98192C00020412 /* Constants.swift */; };
 		3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5361F98199700020412 /* Storyboard+Utility.swift */; };
 		3398F5391F981E8500020412 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5381F981E8500020412 /* HomeViewController.swift */; };
@@ -82,6 +84,8 @@
 		3344F08C200E97AF00E84AD5 /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FindFriends.storyboard; sourceTree = "<group>"; };
 		3344F08E200E984D00E84AD5 /* FindFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
 		3363846E1F96E5C90096A936 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		3396D9A82011883C00A80755 /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
+		3396D9AA20118A3600A80755 /* UIButton_Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Utility.swift; sourceTree = "<group>"; };
 		3398F5341F98192C00020412 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3398F5361F98199700020412 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		3398F5381F981E8500020412 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				33A996F9200DB88600B057C0 /* StorageReference+Post.swift */,
 				33289F8D200FE83200D48BF1 /* DatabaseReference+Location.swift */,
 				33289F8F200FF1A500D48BF1 /* UITableView+Utility.swift */,
+				3396D9A82011883C00A80755 /* UIColor+Utility.swift */,
+				3396D9AA20118A3600A80755 /* UIButton_Utility.swift */,
 			);
 			name = Extensions;
 			path = Fotograma/Extensions;
@@ -502,7 +508,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -516,7 +528,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -589,6 +607,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fotograma/Pods-Fotograma-resources.sh",
 				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -641,6 +662,7 @@
 			files = (
 				331ADC371F96DAAC00AABDFD /* User.swift in Sources */,
 				3398F5411F982DB100020412 /* StorageService.swift in Sources */,
+				3396D9A92011883C00A80755 /* UIColor+Utility.swift in Sources */,
 				33289F92200FF48100D48BF1 /* FGPaginationHelper.swift in Sources */,
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
 				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
@@ -652,6 +674,7 @@
 				33A996FE200DC0A900B057C0 /* PostImageCell.swift in Sources */,
 				33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */,
 				3344F08F200E984D00E84AD5 /* FindFriendsCell.swift in Sources */,
+				3396D9AB20118A3600A80755 /* UIButton_Utility.swift in Sources */,
 				3398F5391F981E8500020412 /* HomeViewController.swift in Sources */,
 				3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */,
 				3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */,
