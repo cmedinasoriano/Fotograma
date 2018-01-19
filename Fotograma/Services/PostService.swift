@@ -40,6 +40,34 @@ struct PostService {
     })
   }
 
+  static func flag(_ post: Post) {
+    // Check the the post is an existing post by confirming that it has a key.
+    guard let postKey = post.key else { return }
+    
+    // Build a reference to the DatabaseReference path for flagged posts.
+    let flaggedPostRef = DatabaseReference.toLocation(.flaggedPosts(postKey: postKey))
+    
+    // Create a dictionary with relevant information for the specific flagged post.
+    let flaggedDict = [
+      "image_url": post.imageURL,
+      "poster_uid": post.poster.uid,
+      "reporter_uid": User.current.uid
+    ]
+    
+    // Write to the database.
+    flaggedPostRef.updateChildValues(flaggedDict)
+    
+    // Increment a flag count for each time a specific post is flagged.
+    let flagCountRef = DatabaseReference.toLocation(.flagCount(postKey: postKey))
+    flagCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+      let currentCount = mutableData.value as? Int ?? 0
+      
+      mutableData.value = currentCount + 1
+      
+      return TransactionResult.success(withValue: mutableData)
+    })
+  }
+
   /**
    * Creates new post in database
    *
@@ -94,4 +122,5 @@ struct PostService {
       })
     }
   }
+
 }
