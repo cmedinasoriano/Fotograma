@@ -34,7 +34,7 @@ class FGPaginationHelper<T: FGKeyed> {
   // Key of the last object in pagination data
   var lastObjectKey: String?
   
-  init(pageSize: UInt = 2, serviceMethod: @escaping (UInt, String?, @escaping ([T]) -> Void) -> Void) {
+  init(pageSize: UInt = 3, serviceMethod: @escaping (UInt, String?, @escaping ([T]) -> Void) -> Void) {
     self.pageSize = pageSize
     self.serviceMethod = serviceMethod
   }

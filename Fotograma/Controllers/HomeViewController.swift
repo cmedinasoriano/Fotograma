@@ -33,7 +33,6 @@ class HomeViewController: UIViewController {
     // Do any additional setup after loading the view.
     // Style table
     
-    print("HOME VIEW DID LOAD")
     setupTableView()
     
     reloadTimeline()
@@ -56,7 +55,6 @@ class HomeViewController: UIViewController {
   }
 
   @objc func reloadTimeline() {
-    print("RELOADING TIMELINE")
     // Get
     self.paginationHelper.reloadData(completion: { [unowned self] (posts) in
       self.posts = posts
@@ -145,16 +143,12 @@ extension HomeViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    print("REACHED END OF POSTS")
     // If user has scrolled to the end of the content in memory
     if indexPath.section >= posts.count - 1 {
-      print("GETTING NEXT POSTS")
       // Get the next few posts
       paginationHelper.paginate(completion: { [unowned self] (posts) in
         // Append the posts
         self.posts.append(contentsOf: posts)
-        
-        print("RETRIEVED \(posts.count) NEW POSTS")
         
         // On the main thread
         DispatchQueue.main.async {
@@ -163,7 +157,6 @@ extension HomeViewController: UITableViewDataSource {
         }
       })
     } else {
-      print("NO MORE POSTS AVAILABLE")
       let alertCtrl = UIAlertController.init(title: "End of Timeline", message: "There are no more posts available.", preferredStyle: .alert)
       
       let okAlertAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)

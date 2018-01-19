@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     configureInitialRootViewController(for: window)
 
     return true
+  }
+  
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+    if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+      return true
+    }
+    
+    // other URL handling goes here
+    
+    return false
   }
   
   func applicationWillResignActive(_ application: UIApplication) {
