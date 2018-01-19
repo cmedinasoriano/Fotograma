@@ -13,7 +13,12 @@ import FirebaseDatabase
 struct UserService {
   static func create(_ fireUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
     // Create a tuple of the value we're going to store
-    let userAttrs = ["username": username]
+    let userAttrs: [String: Any] = [
+      "username": username,
+      "follower_count": 0,
+      "following_count": 0,
+      "post_count": 0,
+    ]
     
     // Create a reference to the database
     let ref = DatabaseReference.toLocation(.showUser(uid: fireUser.uid))
@@ -176,6 +181,24 @@ struct UserService {
       
       dispatchGroup.notify(queue: .main, execute: {
         completion(users)
+      })
+    })
+  }
+  
+  static func observeProfile(for user: User, completion: @escaping (DatabaseReference, User?, [Post]) -> Void) -> DatabaseHandle {
+    // Create reference to user
+    let userRef = DatabaseReference.toLocation(.showUser(uid: user.uid))
+    
+    return userRef.observe(.value, with: { snapshot in
+      // Make sure user is valid
+      guard let user = User(snapshot: snapshot) else {
+        return completion(userRef, nil, [])
+      }
+      
+      // Retrieve all posts of respective user
+      posts(for: user, completion: { posts in
+        // Return everything
+        completion(userRef, user, posts)
       })
     })
   }

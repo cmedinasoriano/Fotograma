@@ -27,6 +27,10 @@
 		3363846F1F96E5C90096A936 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3363846E1F96E5C90096A936 /* UserService.swift */; };
 		3396D9A92011883C00A80755 /* UIColor+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9A82011883C00A80755 /* UIColor+Utility.swift */; };
 		3396D9AB20118A3600A80755 /* UIButton_Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9AA20118A3600A80755 /* UIButton_Utility.swift */; };
+		3396D9AD2011A57E00A80755 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9AC2011A57E00A80755 /* ProfileViewController.swift */; };
+		3396D9AF2011A6B100A80755 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396D9AE2011A6B100A80755 /* Profile.storyboard */; };
+		3396D9B12011A7F100A80755 /* PostThumbImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9B02011A7F100A80755 /* PostThumbImageCell.swift */; };
+		3396D9B32011AAE900A80755 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396D9B22011AAE900A80755 /* ProfileHeaderView.swift */; };
 		3398F5351F98192C00020412 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5341F98192C00020412 /* Constants.swift */; };
 		3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5361F98199700020412 /* Storyboard+Utility.swift */; };
 		3398F5391F981E8500020412 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3398F5381F981E8500020412 /* HomeViewController.swift */; };
@@ -86,6 +90,10 @@
 		3363846E1F96E5C90096A936 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		3396D9A82011883C00A80755 /* UIColor+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utility.swift"; sourceTree = "<group>"; };
 		3396D9AA20118A3600A80755 /* UIButton_Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Utility.swift; sourceTree = "<group>"; };
+		3396D9AC2011A57E00A80755 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3396D9AE2011A6B100A80755 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3396D9B02011A7F100A80755 /* PostThumbImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostThumbImageCell.swift; sourceTree = "<group>"; };
+		3396D9B22011AAE900A80755 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		3398F5341F98192C00020412 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3398F5361F98199700020412 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		3398F5381F981E8500020412 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 				3398F5381F981E8500020412 /* HomeViewController.swift */,
 				3398F53A1F981ECD00020412 /* FindFriendsViewController.swift */,
 				3398F53C1F9825F400020412 /* MainTabBarController.swift */,
+				3396D9AC2011A57E00A80755 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +235,8 @@
 				33A996FF200DC53200B057C0 /* PostHeaderCell.swift */,
 				33A99701200DC87B00B057C0 /* PostActionCell.swift */,
 				3344F08E200E984D00E84AD5 /* FindFriendsCell.swift */,
+				3396D9B02011A7F100A80755 /* PostThumbImageCell.swift */,
+				3396D9B22011AAE900A80755 /* ProfileHeaderView.swift */,
 			);
 			name = Views;
 			path = Fotograma/Views;
@@ -236,6 +247,7 @@
 			children = (
 				331ADC2E1F96C9E300AABDFD /* LaunchScreen.storyboard */,
 				331ADC2F1F96C9E300AABDFD /* Main.storyboard */,
+				3396D9AE2011A6B100A80755 /* Profile.storyboard */,
 				3344F08C200E97AF00E84AD5 /* FindFriends.storyboard */,
 				33A996FB200DBAE800B057C0 /* Home.storyboard */,
 				331ADC321F96CA3B00AABDFD /* Login.storyboard */,
@@ -446,6 +458,7 @@
 				331ADC311F96C9E300AABDFD /* Main.storyboard in Resources */,
 				331ADC331F96CA3B00AABDFD /* Login.storyboard in Resources */,
 				331ADC301F96C9E300AABDFD /* LaunchScreen.storyboard in Resources */,
+				3396D9AF2011A6B100A80755 /* Profile.storyboard in Resources */,
 				33F7A7031F96C2FE003C726F /* Assets.xcassets in Resources */,
 				331ADC2B1F96C9A300AABDFD /* GoogleService-Info.plist in Resources */,
 			);
@@ -667,6 +680,7 @@
 				331ADC351F96CB1000AABDFD /* LoginViewController.swift in Sources */,
 				3398F53D1F9825F400020412 /* MainTabBarController.swift in Sources */,
 				33289F90200FF1A500D48BF1 /* UITableView+Utility.swift in Sources */,
+				3396D9B32011AAE900A80755 /* ProfileHeaderView.swift in Sources */,
 				3363846F1F96E5C90096A936 /* UserService.swift in Sources */,
 				33A99702200DC87B00B057C0 /* PostActionCell.swift in Sources */,
 				3332D004200E816300298F06 /* LikeService.swift in Sources */,
@@ -674,10 +688,12 @@
 				33A996FE200DC0A900B057C0 /* PostImageCell.swift in Sources */,
 				33A996F8200DB7D300B057C0 /* UIImage+Size.swift in Sources */,
 				3344F08F200E984D00E84AD5 /* FindFriendsCell.swift in Sources */,
+				3396D9B12011A7F100A80755 /* PostThumbImageCell.swift in Sources */,
 				3396D9AB20118A3600A80755 /* UIButton_Utility.swift in Sources */,
 				3398F5391F981E8500020412 /* HomeViewController.swift in Sources */,
 				3398F53F1F98278800020412 /* FGPhotoHelper.swift in Sources */,
 				3398F5371F98199700020412 /* Storyboard+Utility.swift in Sources */,
+				3396D9AD2011A57E00A80755 /* ProfileViewController.swift in Sources */,
 				3398F53B1F981ECD00020412 /* FindFriendsViewController.swift in Sources */,
 				33A996FA200DB88600B057C0 /* StorageReference+Post.swift in Sources */,
 				33289F8E200FE83200D48BF1 /* DatabaseReference+Location.swift in Sources */,

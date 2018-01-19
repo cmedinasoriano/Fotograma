@@ -22,9 +22,9 @@ class FindFriendsCell: UITableViewCell {
     super.awakeFromNib()
     // Initialization code
     
+    followButton.clipsToBounds = true
     followButton.layer.borderWidth = 1
     followButton.layer.cornerRadius = 24
-    followButton.clipsToBounds = true
     followButton.layer.borderColor = UIColor.fgLightGray.cgColor
     followButton.setTitle("Follow", for: .normal)
     followButton.setTitle("Following", for: .selected)

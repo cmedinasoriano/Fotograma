@@ -19,6 +19,10 @@ extension DatabaseReference {
     
     case users
     case showUser(uid: String)
+    case followerCount(uid: String)
+    case followingCount(uid: String)
+    case postCount(uid: String)
+  
     case timeline(uid: String)
     
     case followers(uid: String)
@@ -47,6 +51,15 @@ extension DatabaseReference {
       case .showUser(let uid):
         return root.child("users").child(uid)
         
+      case .followerCount(let uid):
+        return root.child("users").child(uid).child("follower_count")
+
+      case .followingCount(let uid):
+        return root.child("users").child(uid).child("following_count")
+        
+      case .postCount(let uid):
+        return root.child("users").child(uid).child("post_count")
+
       case .timeline(let uid):
         return root.child("timeline").child(uid)
         
@@ -60,7 +73,7 @@ extension DatabaseReference {
         return root.child("postLikes/\(postKey)")
         
       case let .likesCount(posterUID, postKey):
-        return root.child("posts").child(posterUID).child(postKey).child("likes_count")
+        return root.child("posts").child(posterUID).child(postKey).child("like_count")
       }
     }
   }

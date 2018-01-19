@@ -28,7 +28,10 @@ class User: NSObject {
   let uid: String
   let username: String
   var isFollowed = false
-
+  var followerCount: Int?
+  var followingCount: Int?
+  var postCount: Int?
+  
   // MARK: - Init
   init(uid: String, username: String) {
     self.uid = uid
@@ -42,15 +45,21 @@ class User: NSObject {
     // Cast the snapshot as a dictionary
     guard let dict = snapshot.value as? [String: Any],
       // Also make sure snapshot has a username property
-      let username = dict["username"] as? String
+      let username = dict["username"] as? String,
+      let followerCount = dict["follower_count"] as? Int,
+      let followingCount = dict["following_count"] as? Int,
+      let postCount = dict["post_count"] as? Int
       // Otherwise return nil
       else { return nil }
     
     // Set user id
     self.uid = snapshot.key
-    // Set username
+    // Set properties
     self.username = username
-    
+    self.followerCount = followerCount
+    self.followingCount = followingCount
+    self.postCount = postCount
+
     // Initialize NSObject
     super.init()
   }

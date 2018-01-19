@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Jt-Fx-LFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ep8-ZS-njh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vJH-kg-P6H">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FindFriendsCell" rowHeight="71" id="i9J-5G-JTd" customClass="FindFriendsCell" customModule="Fotograma" customModuleProvider="target">
@@ -75,18 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KnW-Cj-bYo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Find Friends" id="crJ-uC-gsf">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Gxg-U6-TQZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r5n-sw-dn3">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutBtnTapped:" destination="Ep8-ZS-njh" eventType="touchUpInside" id="2lu-a4-m8N"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Find Friends" id="crJ-uC-gsf"/>
                     <connections>
                         <outlet property="tableView" destination="vJH-kg-P6H" id="4Fm-fz-tyb"/>
                     </connections>
@@ -95,29 +84,5 @@
             </objects>
             <point key="canvasLocation" x="1399" y="1193"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HSa-2W-kz0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Jt-Fx-LFc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="" image="tab_profile_black" id="DYm-uD-UtO">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NcL-Xs-0Qt">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ep8-ZS-njh" kind="relationship" relationship="rootViewController" id="8C3-rt-WVb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gS1-AT-DPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="724.79999999999995" y="1193.7031484257873"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="tab_profile_black" width="25" height="25"/>
-    </resources>
 </document>
