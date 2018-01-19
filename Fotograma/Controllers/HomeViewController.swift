@@ -69,6 +69,41 @@ class HomeViewController: UIViewController {
     })
   }
 
+  func handleOptionsButtonTap(from cell: PostHeaderCell) {
+    // Make sure we can get the indexPath for the cell to the the post
+    guard let indexPath = tableView.indexPath(for: cell) else { return }
+    
+    // Get the post using indexPath section
+    let post = posts[indexPath.section]
+    let poster = post.poster
+    
+    // Create alert controller
+    let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    
+    // If poster is not user
+    if poster.uid != User.current.uid {
+      // Create flag action
+      let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
+        // Flag post
+        PostService.flag(post)
+        // Create ok alert
+        let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
+        okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(okAlert, animated: true)
+      }
+      
+      // Attach flag action to alert controller
+      alertController.addAction(flagAction)
+    }
+    
+    // Create cancel action and attach to alert controller
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    alertController.addAction(cancelAction)
+    
+    // Present the action sheet
+    present(alertController, animated: true)
+  }
+
   /*
    // MARK: - Navigation
    
@@ -119,6 +154,7 @@ extension HomeViewController: UITableViewDataSource {
       let cell: PostHeaderCell = tableView.dequeueReusableCell()
 
       cell.usernameLabel.text = post.poster.username
+      cell.didTapOptionsButtonForCell = handleOptionsButtonTap(from:)
 
       return cell
     // Image Cell

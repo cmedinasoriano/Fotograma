@@ -31,6 +31,9 @@ extension DatabaseReference {
     case isLiked(postKey: String)
     case likesCount(posterUID: String, postKey: String)
 
+    case flaggedPosts(postKey: String)
+    case flagCount(postKey: String)
+  
     func asDatabaseReference() -> DatabaseReference {
       let root = Database.database().reference()
       
@@ -74,6 +77,12 @@ extension DatabaseReference {
         
       case let .likesCount(posterUID, postKey):
         return root.child("posts").child(posterUID).child(postKey).child("like_count")
+        
+      case .flaggedPosts(let postKey):
+        return root.child("flagged_posts").child(postKey)
+      
+      case .flagCount(let postKey):
+        return root.child("flagged_posts").child(postKey).child("flag_count")
       }
     }
   }
