@@ -49,6 +49,50 @@ struct FollowService {
         success(false)
       }
       
+      // Create dispatch group to handle multiple asynchrous operations
+      let dispatchGroup = DispatchGroup()
+      
+      // Enter the dispatch group to watch current user following count
+      dispatchGroup.enter()
+      
+      // Create reference to current user following count
+      let followingCountRef = DatabaseReference.toLocation(.followingCount(uid: currentUID))
+      followingCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+        // Get the current number of people user follows
+        let currentCount = mutableData.value as? Int ?? 0
+        // Increase user followings count
+        mutableData.value = currentCount + 1
+        return TransactionResult.success(withValue: mutableData)
+      }, andCompletionBlock: { (error, _, _) in
+        if let error = error {
+          assertionFailure(error.localizedDescription)
+        }
+        
+        dispatchGroup.leave()
+      })
+      
+      // Enter dispatch group again to watch user follower count
+      dispatchGroup.enter()
+      
+      // Get a reference to the followers of a user
+      let followerCountRef = DatabaseReference.toLocation(.followerCount(uid: user.uid))
+      followerCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+        // Get the number of followers
+        let currentCount = mutableData.value as? Int ?? 0
+        // Increase followers
+        mutableData.value = currentCount + 1
+        return TransactionResult.success(withValue: mutableData)
+      }, andCompletionBlock: { (error, _, _) in
+        if let error = error {
+          assertionFailure(error.localizedDescription)
+        }
+        
+        dispatchGroup.leave()
+      })
+      
+      // Enter dispatch group again to watch user timeline updates
+      dispatchGroup.enter()
+    
       UserService.posts(for: user) { (posts) in
         // Get all the post ids for the user
         let postKeys = posts.flatMap { $0.key }
@@ -66,9 +110,13 @@ struct FollowService {
             assertionFailure(error.localizedDescription)
           }
           
-          // Return success if no error
-          success(error == nil)
+          dispatchGroup.leave()
         })
+      }
+      
+      // Once every request has been executed call success
+      dispatchGroup.notify(queue: .main) {
+        success(true)
       }
     }
   }
@@ -86,9 +134,77 @@ struct FollowService {
     ref.updateChildValues(followData) { (error, _) in
       if let error = error {
         assertionFailure(error.localizedDescription)
+        return success(false)
       }
       
-      success(error == nil)
+      let dispatchGroup = DispatchGroup()
+      
+      // Watch current user following count
+      dispatchGroup.enter()
+      
+      // Get reference to current user following count
+      let followingCountRef = DatabaseReference.toLocation(.followingCount(uid: currentUID))
+      // Run transaction
+      followingCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+        // Get current number of users followed
+        let currentCount = mutableData.value as? Int ?? 0
+        // Decrease number of users followed
+        mutableData.value = currentCount - 1
+        
+        return TransactionResult.success(withValue: mutableData)
+      }, andCompletionBlock: { (error, _, _) in
+        if let error = error {
+          assertionFailure(error.localizedDescription)
+        }
+        
+        dispatchGroup.leave()
+      })
+      
+      // Watch user followers count
+      dispatchGroup.enter()
+      
+      // Get reference to user followers count
+      let followerCountRef = DatabaseReference.toLocation(.followerCount(uid: user.uid))
+      // Run transaction
+      followerCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+        // Get current number of user followers
+        let currentCount = mutableData.value as? Int ?? 0
+        // Decrease number of user followers
+        mutableData.value = currentCount - 1
+        
+        return TransactionResult.success(withValue: mutableData)
+      }, andCompletionBlock: { (error, _, _) in
+        if let error = error {
+          assertionFailure(error.localizedDescription)
+        }
+        
+        dispatchGroup.leave()
+      })
+      
+      // Watch user posts
+      dispatchGroup.enter()
+      UserService.posts(for: user, completion: { (posts) in
+        var unfollowData = [String: Any]()
+        let postKeys = posts.flatMap { $0.key }
+        
+        // Update unfollow data
+        postKeys.forEach {
+          unfollowData["timeline/\(currentUID)/\($0)"] = NSNull()
+        }
+        
+        ref.updateChildValues(unfollowData, withCompletionBlock: { (error, ref) in
+          if let error = error {
+            assertionFailure(error.localizedDescription)
+          }
+          
+          dispatchGroup.leave()
+        })
+      })
+      
+      // Success
+      dispatchGroup.notify(queue: .main) {
+        success(true)
+      }
     }
   }
 }

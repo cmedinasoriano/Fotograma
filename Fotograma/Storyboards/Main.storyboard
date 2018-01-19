@@ -39,7 +39,7 @@
                     <connections>
                         <segue destination="pOv-7X-Ol0" kind="relationship" relationship="viewControllers" id="P8V-VJ-Qus"/>
                         <segue destination="kNq-wL-jVZ" kind="relationship" relationship="viewControllers" id="9w4-Hv-zd3"/>
-                        <segue destination="Q69-0I-rW1" kind="relationship" relationship="viewControllers" id="qMi-me-Vf8"/>
+                        <segue destination="KfZ-bJ-bEI" kind="relationship" relationship="viewControllers" id="us8-sv-YeT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYQ-YK-9zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,15 +56,15 @@
             </objects>
             <point key="canvasLocation" x="-419" y="752"/>
         </scene>
-        <!--FindFriends-->
-        <scene sceneID="bN0-vX-2hy">
+        <!--Profile-->
+        <scene sceneID="tQk-Kv-l44">
             <objects>
-                <viewControllerPlaceholder storyboardName="FindFriends" id="Q69-0I-rW1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0My-N2-TLN"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="KfZ-bJ-bEI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pdj-xr-1xV"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aUe-pv-JVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aj7-Hb-6EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="753"/>
+            <point key="canvasLocation" x="-10" y="751"/>
         </scene>
     </scenes>
     <resources>

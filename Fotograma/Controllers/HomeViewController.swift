@@ -156,14 +156,6 @@ extension HomeViewController: UITableViewDataSource {
           self.tableView.reloadData()
         }
       })
-    } else {
-      let alertCtrl = UIAlertController.init(title: "End of Timeline", message: "There are no more posts available.", preferredStyle: .alert)
-      
-      let okAlertAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
-      
-      alertCtrl.addAction(okAlertAction)
-      
-      alertCtrl.show(self, sender: nil)
     }
   }
   

@@ -14,6 +14,7 @@ extension UIStoryboard {
     // Cases stand for storyboard names
     case main
     case login
+    case profile
     case findFriends
 
     // Returns corresponding name of the storyboard

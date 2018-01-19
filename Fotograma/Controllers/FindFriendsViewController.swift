@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class FindFriendsViewController: UIViewController {
   
@@ -43,19 +42,6 @@ class FindFriendsViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-  
-  @IBAction func logoutBtnTapped(_ sender: UIButton) {
-    let firebaseAuth = Auth.auth()
-    
-    do {
-      try firebaseAuth.signOut()
-      let initialViewController = UIStoryboard.initialViewController(for: .login)
-      self.view.window?.rootViewController = initialViewController
-      self.view.window?.makeKeyAndVisible()
-    } catch let error as NSError {
-      print("Error signing out %@", error)
-    }
   }
   
   /*
